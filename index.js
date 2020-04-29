@@ -12,7 +12,7 @@ require("./services/cache");
 
 mongoose.Promise = global.Promise;
 mongoose
-  .connect(keys.mongoURI, { useMongoClient: true })
+  .connect(keys.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("Database is running"))
   .catch((err) => console.log(`Database error: ${err}`));
 
