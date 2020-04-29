@@ -5,7 +5,7 @@ const userFactory = require("../factories/userFactory");
 class Page {
   static async build() {
     const browser = await puppeteer.launch({
-      executablePath: "/usr/bin/chromium-browser",
+      // executablePath: "/usr/bin/chromium-browser",
       headless: true,
       args: ["--no-sandbox"],
     });
